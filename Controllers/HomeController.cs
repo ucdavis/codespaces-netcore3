@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using codespaces_netcore3.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace codespaces_netcore3.Controllers
 {
@@ -23,6 +24,7 @@ namespace codespaces_netcore3.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
