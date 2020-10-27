@@ -30,12 +30,11 @@ namespace codespaces_netcore3
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = AspNet.Security.OAuth.GitHub.GitHubAuthenticationDefaults.AuthenticationScheme;
-                // options.DefaultScheme = AspNet.Security.OAuth.GitHub.GitHubAuthenticationDefaults.AuthenticationScheme;
-                // options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
             .AddCookie()
             .AddGitHub(options =>
             {
+                // sample demo app from https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers#getting-started
                 options.ClientId = "49e302895d8b09ea5656";
                 options.ClientSecret = "98f1bf028608901e9df91d64ee61536fe562064b";
             });
